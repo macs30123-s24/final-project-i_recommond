@@ -1,6 +1,6 @@
 # AWS Assisted Pipline for A Recommondation System
 
-## Yunrui Bao
+### Yunrui Bao
 
 ## Problem Description: 
 
