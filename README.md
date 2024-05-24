@@ -3,7 +3,9 @@
 ### Yunrui Bao
 
 ## Problem Description: 
-As we entered the digital era, sellers embraced online platforms, offering consumers the convenience of shopping from home. However, this transition also brought with it a surplus of information that often leaves consumers overwhelmed and confused. To address this issue of information overload, recommender systems have been developed. These systems enhance the user experience by providing accurate, personalized recommendations that align with individual preferences, thereby simplifying the decision-making process for users.
+As we entered the digital era, sellers embraced online platforms, offering consumers the convenience of shopping from home. However, this transition also brought with it a surplus of information that often leaves consumers overwhelmed and confused. To address this issue of information overload, recommender systems have been developed. These systems enhance the user experience by providing accurate, personalized recommendations that align with individual preferences, thereby simplifying the decision-making process for users. These systems enhance the user experience by providing accurate, personalized recommendations that align with individual preferences, thereby simplifying the decision-making process for users. Also, it can increase conmpanies revenue.  
+
+To train this recommendation system and make a significant impact benefiting users,
 I am collaborating with a startup called “Encore,” which is pioneering the first entirely short video-based resale marketplace platform. The main selling format is an auction where the pre-recorded videos of the items feature human or AI narrators describing the products. The uniqueness of this startup lies in its focus on developing a new second-hand platform aimed at younger users, a demographic not fully captured by current companies.
 
 
