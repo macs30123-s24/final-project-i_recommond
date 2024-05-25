@@ -14,8 +14,33 @@ This project addresses the social science research problem of understanding cons
 
 ## Solution: 
 
+When our app has more than 10K or 100K users, running the recomondation model on the local platform isn't possible because the amout of coumputaional power is way more than local computer can have. Also, in order to run collborative filltering methods, I need to generate a large matrix, when we have users at scale, python files will not work anymore. Therefor I designed this pipline, so there is no analysis need to run locally, and the result can be directly accessed through a json file. By applying large schale computing techniques, we can easily run analysis for more than 100K users in 1 mins. 
+
+Purpose and Impact:  
+
+This pipeline is designed not only to handle the high volume of data efficiently but also to enhance the user experience on the Encore platform by providing timely and relevant product recommendations. By automating data processing and leveraging cloud services, the pipeline supports Encore's rapid growth and adaptability to market changes.
+
+
 - Overview of the pipline: 
-- ![pipleline](https://github.com/macs30123-s24/final-project-i_recommond/blob/main/pipeline.jpg)
+  ![pipleline](https://github.com/macs30123-s24/final-project-i_recommond/blob/main/pipeline.jpg)  
+
+This diagram illustrates a robust data pipeline optimized for handling over 100,000 daily users by leveraging various AWS services and technologies.  
+
+The pipeline operates as follows:
+- PostgreSQL Database: The process begins with a PostgreSQL database where user data is stored. The pipeline initiates by connecting to this database to retrieve the necessary data.
+
+- AWS Lambda: Once the data is fetched, AWS Lambda functions are used to process and transform this data into a CSV format. Lambda provides a serverless architecture that helps scale data processing without the need to manage servers.
+
+- Amazon S3: The processed CSV file is then stored in an S3 bucket, a scalable storage solution in AWS. This storage acts as an intermediary, holding the data before it's further processed by PySpark.
+
+- Amazon EMR: The stored CSV data is accessed by an Amazon EMR (Elastic MapReduce) cluster, which runs PySpark jobs. PySpark allows for sophisticated data processing and analytics, suitable for the large-scale data inherent to this pipeline.
+
+- URLs: The JSON files stored in S3 are associated with pre-signed URLs, which facilitate secure and temporary access to the data. These URLs can be used to share analysis results with stakeholders or to integrate results into other applications or platforms.
+
+
+
+
+
 Currently, we only have 1000 users and not a lot of datapoints to trian the I will continue to work with them through out the year and further develop it into my professional thesis. But for the sake of final project, 
 
 extract “uid”,"userName",category, sub_category,
