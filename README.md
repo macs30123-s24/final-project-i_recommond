@@ -14,18 +14,16 @@ This project addresses the social science research problem of understanding cons
 
 ## Solution: 
 
-When our app has more than 10K or 100K users, running the recomondation model on the local platform isn't possible because the amout of coumputaional power is way more than local computer can have. Also, in order to run collborative filltering methods, I need to generate a large matrix, when we have users at scale, python files will not work anymore. Therefor I designed this pipline, so there is no analysis need to run locally, and the result can be directly accessed through a json file. By applying large schale computing techniques, we can easily run analysis for more than 100K users in 1 mins. 
+### Justification for Large-scale Computing: 
+As our application scales beyond 10K or 100K users, running the recommendation model on local infrastructure becomes impractical due to the significant computational power required. Additionally, implementing collaborative filtering methods necessitates generating a large matrix, which is unfeasible for local computation when dealing with user data at scale. To address these challenges, I have designed a pipeline that eliminates the need for local analysis, allowing results to be directly accessed through a JSON file saved in a S3 bucket. By leveraging large-scale computing techniques, this system can efficiently conduct analyses for over 100,000 users within a minute, ensuring performance and scalability.  
 
-Purpose and Impact:  
-
-This pipeline is designed not only to handle the high volume of data efficiently but also to enhance the user experience on the Encore platform by providing timely and relevant product recommendations. By automating data processing and leveraging cloud services, the pipeline supports Encore's rapid growth and adaptability to market changes.
-
-
-- Overview of the pipline: 
+### Overview of the pipline: 
   ![pipleline](https://github.com/macs30123-s24/final-project-i_recommond/blob/main/pipeline.jpg)  
 
 This diagram illustrates a robust data pipeline optimized for handling over 100,000 daily users by leveraging various AWS services and technologies.  
 
+
+### Methods: 
 The pipeline operates as follows:
 - PostgreSQL Database: The process begins with a PostgreSQL database where user data is stored. The pipeline initiates by connecting to this database to retrieve the necessary data.
 
@@ -51,12 +49,12 @@ extract “uid”,"userName",category, sub_category,
 
 
 
-- conclusion:
+### Purpose and Impact:  
+
+This pipeline is designed not only to handle the high volume of data efficiently but also to enhance the user experience on the Encore platform by providing timely and relevant product recommendations. By automating data processing and leveraging cloud services, the pipeline supports Encore's rapid growth and adaptability to market changes.
+
 
 
 ## Next Step: 
 
- justification of the importance of using scalable computing methods to solve it, as well as a description of the large-scale computing methods you employ in the project.
 
-
-Methodology: The project will utilize machine learning techniques, specifically collaborative filtering, to build the recommendation system. Collaborative filtering will be employed to predict user preferences based on interactions with similar users and items. The dataset will consist of extensive user data (e.g., past purchases, browsing history) and item data (e.g., category, price, reviews) from the e-commerce platform.
